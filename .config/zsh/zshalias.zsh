@@ -49,4 +49,4 @@ alias updatemirrors="sudo /usr/bin/reflector --latest 30 --country Greece,German
 alias updatemirrorsr="sudo /usr/bin/reflector --latest 30 --country Greece,Germany,Netherlands --protocol https --age 24 --sort rate --save /etc/pacman.d/mirrorlist"
 
 # sxholh
-alias sch="/usr/bin/libreoffice $HOME/documents/schedule.md & disown"
+alias sch="/usr/bin/cat $HOME/documents/schedule.txt"
