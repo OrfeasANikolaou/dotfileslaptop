@@ -74,11 +74,11 @@ window.inactive.button.unpressed.image.color: #ff0000
 # menu.items.text.color: #000000
 # menu.items.active.bg.color: #e1dedb
 # menu.items.active.text.color: #000000
-# menu.items.padding.x: 7
-# menu.items.padding.y: 4
+menu.items.padding.x: 10
+menu.items.padding.y: 8
 # menu.separator.width: 1
 # menu.separator.padding.width: 6
-# menu.separator.padding.height: 3
+menu.separator.padding.height: 4
 # menu.separator.color: #888888
 # menu.title.bg.color: #589bda
 # menu.title.text.color: #ffffff
