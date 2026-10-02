@@ -1,0 +1,171 @@
+{
+  // remove distro logo
+  "logo": { "color": {"1": "blue", "2": "blue"} },
+
+  "modules": [
+
+
+    // separator
+    {
+      "type": "custom",
+      "format": "--------------------------------------------------------------"
+    },
+    
+
+    // login manager
+    "lm",
+
+    // window manager
+    { "type": "wm",
+      "format": "{pretty-name} {protocol-name}"
+    },
+
+    // desktop environment
+    { "type": "de",
+      "format": "{pretty-name} {version}"
+    },
+    
+    // display
+    {
+      "type": "display",
+      "format": "{width}x{height} {12}\" {refresh-rate}Hz (x{21} scaling)"
+    },
+
+
+    // separator
+    {
+      "type": "custom",
+      "format": "--------------------------------------------------------------"
+    },
+
+    // font
+    {
+      "type": "font",
+      "format": "{font1}"
+    },
+
+    // terminal font
+    { 
+      "type": "terminalfont",
+      "format": "{combined}"
+    },
+
+    // separator
+    {
+      "type": "custom",
+      "format": "--------------------------------------------------------------"
+    },
+
+
+    // shell
+    "shell",
+
+    // terminal
+    "terminal",
+
+    // separator
+    {
+      "type": "custom",
+      "format": "--------------------------------------------------------------"
+    },
+
+    // operating system
+    {
+      "type": "os",
+      "format": "{pretty-name} {arch}"
+    },
+
+    // kernel
+    "kernel",
+
+    // packages
+    "packages",
+
+    // uptime
+    "uptime",
+
+    // separator
+    {
+      "type": "custom",
+      "format": "--------------------------------------------------------------"
+    },
+
+    // MOBO
+    {
+      "type": "board",
+      "format": "{vendor} {name}"
+    },
+
+    // CPU
+    {
+      "type": "cpu",
+      "format": "{name} {march}"
+    },
+
+    // GPU
+    {
+      "type": "gpu",
+      "format": "{vendor} {name}"
+    },
+
+    // RAM
+    "memory",
+
+
+    // separator
+    {
+      "type": "custom",
+      "format": "--------------------------------------------------------------"
+    },
+
+
+    // storage
+    {
+      "key": "{mountpoint}",
+      "type": "disk",
+      // "hideFolders": "",
+      "format": "{size-used} / {size-total} ({size-percentage}) - {filesystem} read-only: {is-readonly}"
+    },
+
+
+    // separator
+    {
+      "type": "custom",
+      "format": "--------------------------------------------------------------"
+    },
+
+    // {
+    // "type": "command",
+    // "key": "OS Age",
+    // "text": "birth_install=$(stat -c %W /); current=$(date +%s); days_difference=$(( (current - birth_install) / 86400 )); echo $days_difference days"
+    // },
+
+    // datetime
+    {
+      "type": "battery"
+    },
+    {
+      "key": "Date",
+      "type": "datetime",
+      "format": "{day-pretty} of {month-name} {year}"
+    },
+
+    {
+      "key": "Install Date",
+      "type": "disk",
+      "folders": "/",
+      "format": "{create-time:10}"
+      // "format": "{create-time:10} ({days} days)"
+    },
+
+    // colors
+    "colors",
+
+    // separator
+    {
+      "type": "custom",
+      "format": "--------------------------------------------------------------"
+    }
+  ]
+}
+

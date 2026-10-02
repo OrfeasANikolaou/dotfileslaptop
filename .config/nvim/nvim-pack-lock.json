@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/OrfeasANikolaou/nvim-treesitter"
+    },
+    "oil.nvim": {
+      "rev": "b91ee5a77a6a9605d9c1aaf4fda74b66082c8297",
+      "src": "https://github.com/OrfeasANikolaou/oil.nvim"
+    }
+  }
+}
