@@ -1,0 +1,137 @@
+// -*- mode: jsonc -*-
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 16,
+  "width": 1920,
+  "spacing": 3,
+
+  "modules-left": [
+    "pulseaudio",
+    "network",
+    "battery",
+    "ext/workspaces",
+    "wlr/taskbar"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+    // "temperature",
+    // "idle_inhibitor",
+    // "power-profiles-daemon",
+    // "custom/bluetooth",
+
+  "ext/workspaces": {
+    "format": "{id}",
+    "on-click": "activate",
+    "sort-by-id": true,
+    "all-outputs": true
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "max-length": 10,
+    "markup": true,
+    "tooltip-format": "<span color='#0000ff' background='#faf9f9'><tt>{}</tt></span>",
+    "icon-size": 22,
+    "icon-theme":"hicolor",
+    "on-click": "minimize-raise",
+    "on-click-middle": "close",
+    "all-outputs": true
+    // "ignore-list": [],
+    // "rewrite": {
+    //   "Qutebrowser": "Browser"
+    // },
+  },
+
+
+  "clock": {
+    "format": "{:%H:%M %A %d/%m}",
+    "tooltip-format": "<span color='#000000' background='#faf9f9'><big>{:%A %d}\n{calendar}</big>\n<tt>{tz_list}</tt></span>",
+    "calendar": {
+    "mode"             : "year",
+    "mode-mon-col"     : 4,
+    "weeks-pos"        : "right",
+    "first-day-of-week": 1,
+    "on-scroll"        : 1,
+    "on-click-right"   : "mode",
+      "format": {
+        "months":     "<span color='#0000ff' background='#faf9f9'><tt>{}</tt></span>",
+        "days":       "<span color='#000000' background='#faf9f9'><tt>{}</tt></span>",
+        "weeks":      "<span color='#ff0000' background='#faf9f9'><i><u><tt>W{}</tt></u></i></span>",
+        "weekdays":   "<span color='#00aa00' background='#faf9f9'>{}</span>",
+        "today":      "<span color='#000000' background='#66ff66'><u><tt>{}</tt></u></span>"
+      }
+    },
+    "interval": 60
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "tooltip-format": "<span background='#faf9f9' color='#0000ff'><tt><big>{}</big></tt></span>",
+    "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "format-charging": "󰂄 {capacity}%",
+    "states": {
+        "warning": 30,
+        "critical": 20
+    }
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 {volume}%",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "tooltip-format": "<span color='#0000ff' background='#faf9f9'><tt>{desc}</tt></span>",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "network": {
+    "format-wifi": "󰖩({signalStrength}%)",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤮",
+    "tooltip-format": "<span color='#0000ff' background='#faf9f9'><tt>SSID: {essid} {ifname}: {ipaddr}/{cidr}</tt></span>"
+  }
+
+
+
+  // "custom/bluetooth": {
+  //   "exec": "if systemctl is-active --quiet bluetooth.service; then echo '{\"text\":\"󰂯\",\"class\":\"active\"}'; else echo '{\"text\":\"\",\"class\":\"inactive\"}'; fi",
+  //   "interval": 2,
+  //   "return-type": "json",
+  //   "hide-empty-text": true,
+  //   "tooltip": false,
+  //   "on-click": "blueberry"
+  // },
+  // "temperature": {
+  //   "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+  //   "critical-threshold": 80,
+  //   "format": "{temperatureC}°C",
+  //   "format-icons": ["", "", ""]
+  // },
+  // "idle_inhibitor": {
+  //   "format": "{icon}",
+  //   "format-icons": {
+  //     "activated": " ",
+  //     "deactivated": " "
+  //     }
+  // },
+  // "power-profiles-daemon": {
+  //   "format": "{icon}",
+  //   "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+  //   "tooltip": true,
+  //   "format-icons": {
+  //     "default": "",
+  //     "performance": "",
+  //     "balanced": " ",
+  //     "power-saver": " "
+  //     }
+  // },
+}

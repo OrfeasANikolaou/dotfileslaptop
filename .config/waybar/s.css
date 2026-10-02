@@ -1,0 +1,254 @@
+/* ---------- Summer Palette (from beach.jpg) ---------- */
+@define-color bg      rgba(255, 255, 235, 0);
+@define-color lred rgba(215, 175, 110, 0.7);
+@define-color hred rgba(255, 100, 70, 0.7);
+@define-color border  rgba(255, 255, 255, 0.60);
+@define-color fg      #1A3550;
+@define-color accent  #87C8E8;
+@define-color subtext #7AAEC0;
+@define-color red     #E88A8A;
+@define-color green   #27AE60;
+@define-color yellow  #D4C8A4;
+
+/* Universal styling */
+* {
+  border-radius: 0;
+  font-family: "JetBrainsMonoNL Nerd Font Mono";
+  font-size: 15px;
+  min-height: 15px;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+    border: none;
+    padding: 4px 0px;
+}
+
+
+/* ---------- Workspaces ---------- */
+#workspaces {
+}
+#workspaces button {
+    padding: 0 8px;
+    margin: 2px 2px;
+    border-radius: 999px;
+    color: @fg;
+    background: @hred;
+    border: none;
+}
+
+#workspaces button.active {
+    color: @fg;
+    background-color: @lred;
+    padding: 0 8px;
+    margin: 2px 2px;
+    font-weight: bold;
+    border-radius: 999px;
+}
+
+#workspaces button.urgent {
+    color: #FFFFFF;
+    background-color: @red;
+}
+
+/* ---------- Window title ---------- */
+#window {
+    color: @fg;
+    padding: 0 8px;
+    font-weight: bold;
+}
+
+/* ---------- Clock ---------- */
+#clock {
+    color: @fg;
+    background-color: @lred;
+    font-weight: bold;
+    padding: 4px 8px;
+    margin: 2px 3px;
+    border-radius: 999px;
+}
+
+#clock:hover {
+    opacity: 1;
+}
+
+/* ---------- Bluetooth ---------- */
+#custom-bluetooth {
+    color: @fg;
+    font-weight: normal;
+    padding: 4px 8px;
+    margin: 2px 3px;
+    border-radius: 999px;
+}
+
+#custom-bluetooth.active {
+    background-color: @lred;
+}
+
+#custom-bluetooth.inactive {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+/* ---------- Idle Inhibitor ---------- */
+#idle_inhibitor {
+    color: @fg;
+    background-color: @lred;
+    font-weight: normal;
+    padding: 4px 8px;
+    margin: 2px 3px;
+    border-radius: 999px;
+}
+
+#idle_inhibitor.activated {
+    color: @green;
+    background-color: @lred;
+    padding: 4px 8px;
+    margin: 2px 3px;
+    border-radius: 999px;
+}
+
+/* ---------- Power Profiles Daemon ---------- */
+#power-profiles-daemon {
+    color: @fg;
+    background-color: @lred;
+    font-weight: normal;
+    padding: 4px 8px;
+    margin: 2px 3px;
+    border-radius: 999px;
+}
+
+#power-profiles-daemon.performance {
+    color: @red;
+    font-weight: normal;
+    padding: 4px 8px;
+    margin: 2px 3px;
+    border-radius: 999px;
+}
+
+#power-profiles-daemon.balanced {
+    color: @green;
+    font-weight: normal;
+    padding: 4px 8px;
+    margin: 2px 3px;
+    border-radius: 999px;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @yellow;
+    font-weight: normal;
+    padding: 4px 8px;
+    margin: 2px 3px;
+    border-radius: 999px;
+}
+/* ---------- Common section styling ---------- */
+#tray, #pulseaudio, #temperature, #network{
+    background-color: @lred;
+    padding: 4px 8px;
+    margin: 2px 3px;
+    border-radius: 999px;
+}
+
+/* ---------- System tray ---------- */
+#tray {
+    color: @fg;
+}
+
+/* ---------- Pulseaudio ---------- */
+#pulseaudio {
+    color: @fg;
+    font-size: 18px;
+}
+
+#pulseaudio.muted {
+    color: rgb(222, 0, 0);
+}
+
+/* ---------- Temperature ---------- */
+#temperature {
+    color: @fg;
+    font-size: 18px;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+/* ---------- Network ---------- */
+#network {
+    color: @fg;
+    font-size: 18px;
+}
+
+#network.disconnected {
+    color: @yellow;
+    font-size: 18px;
+}
+
+tooltip {
+    background-color: #faf9f9;
+    color: #000000;
+}
+tooltip label {
+    color: #000000;
+    font-family: "JetBrainsMonoNL";
+    font-size: 13px;
+}
+/* ---------- Battery ---------- */
+#battery {
+    color: @fg;
+    background-color: @lred;
+    font-weight: bold;
+    border-radius: 999px;
+    padding: 0 15px;
+    color: @fg;
+    font-size: 22px;
+}
+
+#battery.warning {
+    background-color: rgba(255, 249, 0, 0.7);
+}
+
+#battery.critical {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+#battery.charging {
+    background-color: rgba(11, 212, 11, 0.7);
+}
+
+/* ---------- Taskbar ---------- */
+#taskbar {
+    margin: 0;
+    padding: 0 4px;
+}
+
+#taskbar button {
+    padding: 0 8px;
+    margin: 0;
+    color: @fg;
+    background: @hred;
+    border: none;
+    border-radius: 999px;
+}
+
+#taskbar button.active {
+    color: @fg;
+    background-color: @lred;
+    border-radius: 999px;
+    padding: 0 8px;
+    margin: 0;
+    font-weight: normal;
+}
+
+#taskbar button:hover {
+    opacity: 0.8;
+}
+
+#taskbar button:not(.active) {
+    color: @fg;
+    font-weight: normal;
+}
