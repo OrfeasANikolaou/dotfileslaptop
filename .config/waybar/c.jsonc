@@ -1,27 +1,80 @@
 // -*- mode: jsonc -*-
 {
+
   "layer": "top",
   "position": "bottom",
   "height": 16,
   "width": 1920,
   "spacing": 3,
 
+
   "modules-left": [
+    "idle_inhibitor",
     "pulseaudio",
     "network",
-    "battery",
-    "ext/workspaces",
-    "wlr/taskbar"
+    "memory",
+    "battery"
   ],
 
   "modules-center": [
     "clock"
   ],
-
+  "modules-right": [
+    "wlr/taskbar",
+    "ext/workspaces"
+  ],
     // "temperature",
-    // "idle_inhibitor",
     // "power-profiles-daemon",
     // "custom/bluetooth",
+
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "<span size='17000'></span>",
+      "deactivated": "<span size='17000'></span>"
+      },
+    "tooltip-format-activated": "<span background='#faf9f9' color='#0000ff'><tt>{}</tt></span>",
+    "tooltip-format-deactivated": "<span background='#faf9f9' color='#0000ff'><tt>{}</tt></span>"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 {volume}%",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "tooltip-format": "<span color='#0000ff' background='#faf9f9'><tt>{desc}</tt></span>",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "network": {
+    "format-wifi": "󰖩({signalStrength}%)",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤮",
+    "tooltip-format": "<span color='#0000ff' background='#faf9f9'><tt>SSID: {essid} {ifname}: {ipaddr}/{cidr}</tt></span>"
+  },
+
+  "memory": {
+       "interval": 30,
+       "format": "<b>{used:0.1f}G/{total:0.1f}G</b> ",
+       "tooltip": false
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "tooltip-format": "<span background='#faf9f9' color='#0000ff'><tt><big>{}</big></tt></span>",
+    "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "format-charging": "󰂄 {capacity}%",
+    "states": {
+        "warning": 30,
+        "critical": 20
+    }
+  },
 
   "ext/workspaces": {
     "format": "{id}",
@@ -46,7 +99,6 @@
     // },
   },
 
-
   "clock": {
     "format": "{:%H:%M %A %d/%m}",
     "tooltip-format": "<span color='#000000' background='#faf9f9'><big>{:%A %d}\n{calendar}</big>\n<tt>{tz_list}</tt></span>",
@@ -66,39 +118,11 @@
       }
     },
     "interval": 60
-  },
-
-  "battery": {
-    "format": "{icon} {capacity}%",
-    "tooltip-format": "<span background='#faf9f9' color='#0000ff'><tt><big>{}</big></tt></span>",
-    "format-icons": [
-        "",
-        "",
-        "",
-        "",
-        ""
-    ],
-    "format-charging": "󰂄 {capacity}%",
-    "states": {
-        "warning": 30,
-        "critical": 20
-    }
-  },
-
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰖁 {volume}%",
-    "format-icons": ["󰕿", "󰖀", "󰕾"],
-    "tooltip-format": "<span color='#0000ff' background='#faf9f9'><tt>{desc}</tt></span>",
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-  },
-
-  "network": {
-    "format-wifi": "󰖩({signalStrength}%)",
-    "format-ethernet": "󰈀",
-    "format-disconnected": "󰤮",
-    "tooltip-format": "<span color='#0000ff' background='#faf9f9'><tt>SSID: {essid} {ifname}: {ipaddr}/{cidr}</tt></span>"
   }
+
+
+}
+
 
 
 
@@ -116,13 +140,6 @@
   //   "format": "{temperatureC}°C",
   //   "format-icons": ["", "", ""]
   // },
-  // "idle_inhibitor": {
-  //   "format": "{icon}",
-  //   "format-icons": {
-  //     "activated": " ",
-  //     "deactivated": " "
-  //     }
-  // },
   // "power-profiles-daemon": {
   //   "format": "{icon}",
   //   "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -134,4 +151,3 @@
   //     "power-saver": " "
   //     }
   // },
-}

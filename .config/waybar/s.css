@@ -1,7 +1,7 @@
 /* ---------- Summer Palette (from beach.jpg) ---------- */
 @define-color bg      rgba(255, 255, 235, 0);
-@define-color lred rgba(215, 175, 110, 0.7);
-@define-color hred rgba(255, 100, 70, 0.7);
+@define-color lred rgba(215, 175, 110, 0.8);
+@define-color hred rgba(255, 100, 70, 0.8);
 @define-color border  rgba(255, 255, 255, 0.60);
 @define-color fg      #1A3550;
 @define-color accent  #87C8E8;
@@ -96,19 +96,18 @@ window#waybar {
 /* ---------- Idle Inhibitor ---------- */
 #idle_inhibitor {
     color: @fg;
-    background-color: @lred;
     font-weight: normal;
-    padding: 4px 8px;
+    padding: 0px 12px;
     margin: 2px 3px;
     border-radius: 999px;
 }
 
 #idle_inhibitor.activated {
-    color: @green;
+    background-color: rgba(11, 212, 11, 0.8);
+}
+
+#idle_inhibitor.deactivated {
     background-color: @lred;
-    padding: 4px 8px;
-    margin: 2px 3px;
-    border-radius: 999px;
 }
 
 /* ---------- Power Profiles Daemon ---------- */
@@ -197,27 +196,35 @@ tooltip label {
     font-family: "JetBrainsMonoNL";
     font-size: 13px;
 }
+/* ---------- Memory ----------- */
+#memory {
+    color: @fg;
+    background-color: @lred;
+    border-radius: 999px;
+    padding: 0 12px;
+    color: @fg;
+}
 /* ---------- Battery ---------- */
 #battery {
     color: @fg;
     background-color: @lred;
     font-weight: bold;
     border-radius: 999px;
-    padding: 0 15px;
+    padding: 0 10px;
     color: @fg;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 #battery.warning {
-    background-color: rgba(255, 249, 0, 0.7);
+    background-color: rgba(255, 249, 0, 0.8);
 }
 
 #battery.critical {
-    background-color: rgba(255, 0, 0, 0.7);
+    background-color: rgba(255, 0, 0, 0.8);
 }
 
 #battery.charging {
-    background-color: rgba(11, 212, 11, 0.7);
+    background-color: rgba(11, 212, 11, 0.8);
 }
 
 /* ---------- Taskbar ---------- */
