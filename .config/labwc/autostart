@@ -50,5 +50,5 @@ mako >/dev/null 2>&1 &
 
 
 swayidle -w \
-  timeout 3 'wtype -M win -M alt o' \
+  timeout 3 'wtype -M win -M alt o -p o -m alt -m win' \
   >/dev/null 2>&1 &
