@@ -420,6 +420,9 @@
     <keybind key="W-S-s">
       <action name="Execute" command="sh -c 'grim -g &quot;$(slurp)&quot; - | swappy -f - -o &quot;$HOME/images/screenshot-$(date +%Y%m%d-%H%M%S).png&quot;'" />
     </keybind>
+    <keybind key="W-A-s">
+      <action name="Execute" command="sh -c 'grim -g &quot;$(slurp)&quot; - | wl-copy'" />
+    </keybind>
 
     <!-- will be invoked through swayidle inside ~/.config/labwc/environment -->
 
