@@ -327,6 +327,9 @@
     <keybind key="W-j">
       <action name="SnapToEdge" direction="down" combine="yes" />
     </keybind>
+    <keybind key="W-m">
+      <action name="SnapToRegion" region="center" />
+    </keybind>
 
     <keybind key="A-Space">
       <action name="ShowMenu" menu="client-menu" atCursor="no" />
