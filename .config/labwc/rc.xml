@@ -265,8 +265,8 @@
       <numlock>on|off</numlock>
     -->
     <layoutScope>global</layoutScope>
-    <repeatRate>25</repeatRate>
-    <repeatDelay>600</repeatDelay>
+    <repeatRate>30</repeatRate>
+    <repeatDelay>500</repeatDelay>
     <keybind key="A-Tab">
       <action name="NextWindow" />
     </keybind>
