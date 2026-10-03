@@ -58,7 +58,7 @@
       <action name="execute" command="firefox" />
     </item>
     <separator />
-    <item label="  File browser">
+    <item label="  Files">
       <action name="execute" command="pcmanfm-qt" />
     </item>
   </menu>
