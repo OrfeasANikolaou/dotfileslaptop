@@ -87,7 +87,7 @@
     "format": "{icon}",
     "max-length": 10,
     "markup": true,
-    "tooltip-format": "<span color='#0000ff' background='#faf9f9'><tt>{}</tt></span>",
+    "tooltip-format": "<span color='#0000ff' background='#faf9f9'><tt>{app_id}</tt></span>",
     "icon-size": 22,
     "icon-theme":"hicolor",
     "on-click": "minimize-raise",
