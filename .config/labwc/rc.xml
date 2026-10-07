@@ -28,7 +28,7 @@
   </core>
 
   <placement>
-    <policy>automatic</policy>
+    <policy>center</policy>
 
     <!--
       When <placement><policy> is "cascade", the offset for cascading new
