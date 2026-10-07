@@ -241,7 +241,7 @@
 
     <desktops>
       <popupTime>0</popupTime>
-      <number>4</number>
+      <number>5</number>
       <prefix>Workspace</prefix>
     </desktops>
 
@@ -363,6 +363,9 @@
     <keybind key="W-4">
       <action name="GoToDesktop" to="Workspace 4" />
     </keybind>
+    <keybind key="W-5">
+      <action name="GoToDesktop" to="Workspace 5" />
+    </keybind>
     <keybind key="W-S-1">
       <action name="SendToDesktop" to="Workspace 1" follow="no" />
     </keybind>
@@ -375,6 +378,9 @@
     <keybind key="W-S-4">
       <action name="SendToDesktop" to="Workspace 4" follow="no" />
     </keybind>
+    <keybind key="W-S-5">
+      <action name="SendToDesktop" to="Workspace 5" follow="no" />
+    </keybind>
     <keybind key="W-A-1">
       <action name="SendToDesktop" to="Workspace 1" follow="yes" />
     </keybind>
@@ -386,6 +392,9 @@
     </keybind>
     <keybind key="W-A-4">
       <action name="SendToDesktop" to="Workspace 4" follow="yes" />
+    </keybind>
+    <keybind key="W-A-5">
+      <action name="SendToDesktop" to="Workspace 5" follow="yes" />
     </keybind>
 
     <keybind key="W-q">
