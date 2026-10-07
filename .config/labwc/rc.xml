@@ -298,8 +298,8 @@
     -->
 
     <layoutScope>global</layoutScope>
-    <repeatRate>30</repeatRate>
-    <repeatDelay>500</repeatDelay>
+    <repeatRate>35</repeatRate>
+    <repeatDelay>200</repeatDelay>
 
     <keybind key="A-Tab">
       <action name="NextWindow" />
