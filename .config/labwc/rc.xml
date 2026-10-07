@@ -851,7 +851,7 @@
       <windowRule identifier="kitty">
         <action name="SendToDesktop" to="Workspace 2" follow="yes" />
       </windowRule>
-      <windowRule identifier="thunderbird">
+      <windowRule identifier="*thunderbird*">
         <action name="SendToDesktop" to="Workspace 4" follow="yes" />
       </windowRule>
       <windowRule identifier="pcmanfm-qt">
