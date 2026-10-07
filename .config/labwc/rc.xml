@@ -420,9 +420,9 @@
     </keybind>
     <keybind key="W-f">
       <action name="Execute" command="firefox" />
+    </keybind>
     <keybind key="W-t">
       <action name="Execute" command="thunderbird" />
-    </keybind>
     </keybind>
     <keybind key="W-e">
       <action name="Execute" command="pcmanfm-qt" />
