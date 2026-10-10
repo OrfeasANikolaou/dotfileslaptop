@@ -13,7 +13,7 @@ alias a="/usr/bin/eza --icons -a --group-directories-first" # show hidden files
 alias la="/usr/bin/eza --icons -la --group-directories-first" # show hidden files, list
 alias etree="/usr/bin/eza --icons --tree" # coloured tree with icons
 
-alias pptx_to_pdf="/usr/bin/soffice --headless --convert-to pdf *.ppt* && rm *.pptx"
+alias pptx_to_pdf="/usr/bin/soffice --headless --convert-to pdf *.ppt* && rm *.ppt*"
 
 alias fetch="/usr/bin/fastfetch --color blue"
 
