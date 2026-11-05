@@ -424,6 +424,9 @@
     <keybind key="W-t">
       <action name="Execute" command="thunderbird" />
     </keybind>
+    <keybind key="W-c">
+      <action name="Execute" command="keepassxc" />
+    </keybind>
     <keybind key="W-e">
       <action name="Execute" command="pcmanfm-qt" />
     </keybind>
@@ -850,6 +853,9 @@
       </windowRule>
       <windowRule identifier="kitty">
         <action name="SendToDesktop" to="Workspace 2" follow="yes" />
+      </windowRule>
+      <windowRule identifier="*keepassxc*">
+        <action name="SendToDesktop" to="Workspace 3" follow="yes" />
       </windowRule>
       <windowRule identifier="*thunderbird*">
         <action name="SendToDesktop" to="Workspace 4" follow="yes" />
